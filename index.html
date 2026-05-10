@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Alz'Mots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bouton menu -->
+    <div class="menu-button" onclick="toggleMenu()">
+        &#8942;
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" class="side-menu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>        
+
+        <a href="index.html">Accueil</a>
+        <a href="theorie.html">Théorie</a>
+        <a href="arbre_decisionnel.html">Arbre décisionnel</a>
+        <a href="emotions.html">Tout savoir sur les émotions</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <h1>Alz'Mots</h1>
+        <div class="project-box">
+            <h2>Présentation du projet</h2>
+          
+            <div class="alz-section">
+              <p>Ce site internet est né d'un constat simple : face à un proche atteint de la maladie d'Alzheimer, les familles et les aidants se retrouvent souvent seuls et démunis. Face à un proche qui cherche ses mots, qui se tait ou qui abandonne sa phrase, il n'est pas toujours évident de trouver les stratégies concrètes pour maintenir une communication apaisée et efficace.</p>
+            </div>
+          
+            <hr class="alz-sep">
+          
+            <div class="alz-section">
+              <h3>Pourquoi ce site ?</h3>
+              <p>Ce projet a été imaginé et réalisé dans le cadre d'un projet de fin d'études en logopédie. En tant que futures logopèdes, nous avons souhaité mettre nos connaissances au service de celles et ceux qui accompagnent au quotidien : vous proposer un outil <strong>concret</strong>, <strong>accessible</strong> et <strong>bienveillant</strong>.</p>
+            </div>
+          
+            <div class="alz-section">
+              <h3>L'outil central</h3>
+              <div class="alz-highlight">
+                <div class="alz-hl-label">Arbre décisionnel</div>
+                <p>Au cœur de ce site : un arbre décisionnel qui vous guide pas à pas vers les stratégies les plus adaptées à la situation que vous êtes en train de vivre. Cette démarche s'inscrit dans ce que la recherche appelle la <strong>guidance des aidants</strong> (caregiver training), une approche dont l'efficacité a été démontrée scientifiquement (Rousseau, 2021).</p>
+              </div>
+            </div>
+          
+            <img src="img/aide.jpg" alt="Illustration aide Alzheimer">
+          
+            <hr class="alz-sep">
+          
+            <div class="alz-section">
+              <h3>Ce site s'adresse à vous</h3>
+              <p>Que vous soyez conjoint(e), enfant, petit-enfant, ami(e) proche ou aidant informel, vous êtes en première ligne. Vous vivez au quotidien ces moments où la communication accroche, où le mot ne sort pas, où vous ne savez pas quoi dire ni quoi faire.</p>
+              <ul class="alz-list">
+                <li>Conjoint·e</li>
+                <li>Enfant</li>
+                <li>Petit·e-enfant</li>
+                <li>Ami·e proche</li>
+                <li>Aidant·e informel·le</li>
+              </ul>
+            </div>
+          
+            <hr class="alz-sep">
+          
+            <div class="alz-section">
+              <h3>Notre approche</h3>
+              <p>Chaque personne atteinte de la maladie d'Alzheimer est unique. La maladie évolue à un rythme propre à chacun, et ce qui fonctionne pour un proche peut ne pas convenir à un autre. C'est pourquoi cet outil n'impose pas une seule bonne réponse, mais vous accompagne dans la recherche de ce qui convient le mieux à <strong>votre situation</strong>, à <strong>votre proche</strong>, à <strong>ce moment précis</strong>.</p>
+            </div>
+          </div>
+            
+           
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Projet réalisé par :</p>
+        <div class="names">
+            <span>Comet--Etcheverry Nahia</span>
+            <span>Danneau Pauline</span>
+            <span>Faure Maëlle</span>
+            <span>Kayi Asmaa</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

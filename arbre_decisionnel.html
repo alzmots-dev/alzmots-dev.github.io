@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Arbre décisionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="arbre.css">
+</head>
+<link rel="stylesheet" href="arbre.css">
+<body>
+
+    <!-- Bouton menu -->
+    <div class="menu-button" onclick="toggleMenu()">
+        &#8942;
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" class="side-menu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>        
+
+        <a href="index.html">Accueil</a>
+        <a href="theorie.html">Théorie</a>
+        <a href="arbre_decisionnel.html">Arbre décisionnel</a>
+        <a href="emotions.html">Tout savoir sur les émotions</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <h1>Les solutions proposées aux situations rencontrées</h1>
+
+        <div class="project-box">
+            <h2>Comment utiliser notre arbre décisionnel</h2>
+            <p>
+                Notre arbre décisionnel est conçu pour vous guider à partir de ce que vous observez. Il vous pose une première question : quelle est la situation rencontrée ? En fonction de votre réponse, il vous oriente vers un ensemble de stratégies adaptées, que vous pourrez expérimenter et ajuster selon votre proche et votre relation avec lui. 
+            </p>
+            <p>
+                Chaque situation et chaque stratégie est détaillée dans les onglets correspondants du site. Vous y trouverez des explications concrètes via des capsules vidéos, des exemples issus du quotidien, et des conseils pour adapter chaque approche à votre proche et à votre façon d'être ensemble.
+            </p>
+           
+            <div id="decision-tree">
+                <h3 style="text-align: center;">Chaque situation peut être rencontrée dans différents contextes.</h3>
+                <div id="breadcrumb"></div>
+                <div id="progress-track"><div id="progress-fill"></div></div>
+                <div id="step-container"></div>
+              </div>
+
+            <img src="img/arbre.jpg" alt="">
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Projet réalisé par :</p>
+        <div class="names">
+            <span>Comet--Etcheverry Nahia</span>
+            <span>Danneau Pauline</span>
+            <span>Faure Maëlle</span>
+            <span>Kayi Asmaa</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="arbre.js"></script>
+</body>
+</html>

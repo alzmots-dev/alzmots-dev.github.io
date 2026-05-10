@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bouton menu -->
+    <div class="menu-button" onclick="toggleMenu()">
+        &#8942;
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" class="side-menu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>        
+
+        <a href="index.html">Accueil</a>
+        <a href="theorie.html">Théorie</a>
+        <a href="arbre_decisionnel.html">Arbre décisionnel</a>
+        <a href="emotions.html">Tout savoir sur les émotions</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <h1>Contact</h1>
+
+        <div class="project-box">
+
+            <h2>Nous contacter</h2>
+        
+            <form action="mailto:alzmots@gmail.com" method="post" enctype="text/plain">
+        
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Prénom</label>
+                    <input type="text" name="prenom" placeholder="Votre prénom" required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Votre message..." required></textarea>
+                </div>
+        
+                <button type="submit" class="btn-send">Envoyer</button>
+        
+            </form>
+
+            <img src="img/soleil.jpg" alt="">
+        
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Projet réalisé par :</p>
+        <div class="names">
+            <span>Comet--Etcheverry Nahia</span>
+            <span>Danneau Pauline</span>
+            <span>Faure Maëlle</span>
+            <span>Kayi Asmaa</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
