@@ -45,19 +45,21 @@ body {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 200px;
+    left: -300px;
+    width: 280px;
     height: 100%;
     background-color: #2c3e50;
     padding-top: 70px;
     transition: 0.3s;
-    z-index: 1001; /* AU-DESSUS */
+    z-index: 1001;
 }
 
 .side-menu a {
     display: block;
     color: white;
     padding: 15px 20px;
+    font-size: 16px;
+    line-height: 1.5;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -342,3 +344,74 @@ textarea {
     font-size: 16px;
     line-height: 1.6;
 }
+@media (max-width: 768px) {
+
+    /* Menu latéral plus large + texte plus grand */
+    .side-menu {
+        width: 270px;
+    }
+
+    .side-menu a {
+        font-size: 22px !important;
+        padding: 16px 20px;
+        line-height: 1.4;
+    }
+    
+    .side-menu {
+        width: 280px !important;
+    }
+
+    .close-btn {
+        font-size: 28px;
+    }
+
+    /* Titre principal */
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    /* Contenu principal */
+    .container {
+        margin-top: 80px;
+        padding: 15px;
+    }
+
+    /* Cadre projet pleine largeur */
+    .project-box {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .project-box img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .alz-list {
+        flex-direction: column;
+    }
+
+    .alz-list li {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .menu-button {
+        font-size: 22px;
+        padding: 6px 10px;
+    }
+
+    .footer .names span {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .names span:not(:last-child)::after {
+        display: none;
+    }
+
+} /* ← accolade fermante, une seule fois à la fin */
