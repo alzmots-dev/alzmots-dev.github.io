@@ -348,17 +348,19 @@ textarea {
 
     /* Menu latéral plus large + texte plus grand */
     .side-menu {
-        width: 270px;
-    }
-
-    .side-menu a {
-        font-size: 22px !important;
-        padding: 16px 20px;
-        line-height: 1.4;
+        width: 75% !important;
+        left: -75% !important;
     }
     
-    .side-menu {
-        width: 280px !important;
+    .side-menu.active {
+        left: 0 !important;
+    }
+    
+    .side-menu a {
+        font-size: 20px !important;
+        padding: 20px 25px !important;
+        line-height: 1.6 !important;
+    }
     }
 
     .close-btn {
@@ -414,4 +416,4 @@ textarea {
         display: none;
     }
 
-} /* ← accolade fermante, une seule fois à la fin */
+ /* ← accolade fermante, une seule fois à la fin */
