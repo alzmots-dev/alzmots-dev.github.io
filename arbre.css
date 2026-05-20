@@ -341,3 +341,8 @@
     .actions-row { flex-direction: column; }
     .btn-back, .btn-restart { width: 100%; text-align: center; }
   }
+  @media (min-width: 600px) {
+    video {
+      width: 250px !important;
+    }
+  }
