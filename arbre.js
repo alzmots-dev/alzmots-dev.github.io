@@ -52,7 +52,8 @@ const DATA = {
       video: {
         num: 1,
         title: 'Vidéo 1 — Ne parvient pas à ressortir un prénom ou un nom d\'objet qu\'il connait',
-        sub: 'Stratégies pratiques au quotidien'
+        sub: 'Stratégies pratiques au quotidien',
+        src: 'Vidéo 1.MP4'
       },
       strategies: [
         'Laisser du temps',
@@ -219,12 +220,15 @@ const DATA = {
   
       const vb = document.createElement('div');
       vb.className = 'video-block';
-      vb.innerHTML = `
-        <div class="video-thumb"><div class="play-icon"></div></div>
-        <div class="video-info">
-          <div class="video-title">${node.video.title}</div>
-          ${node.video.sub ? `<div class="video-sub">${node.video.sub}</div>` : ''}
-        </div>`;
+      vb.innerHTML = node.video.src
+      ? `<video controls style="width:100%; border-radius:9px;">
+           <source src="${node.video.src}" type="video/mp4">
+         </video>`
+      : `<div class="video-thumb"><div class="play-icon"></div></div>
+         <div class="video-info">
+           <div class="video-title">${node.video.title}</div>
+           ${node.video.sub ? `<div class="video-sub">${node.video.sub}</div>` : ''}
+         </div>`;
   
       const slbl = document.createElement('div');
       slbl.className = 'strategies-label';
