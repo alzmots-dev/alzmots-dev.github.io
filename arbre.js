@@ -221,7 +221,7 @@ const DATA = {
       const vb = document.createElement('div');
       vb.className = 'video-block';
       vb.innerHTML = node.video.src
-     ? `<video controls style="width:100%; max-height:300px; border-radius:9px;">
+     ?  `<video controls style="width:50%; max-height:500px; border-radius:9px; display:block; margin:0 auto;">
            <source src="${node.video.src}" type="video/mp4">
          </video>`
       : `<div class="video-thumb"><div class="play-icon"></div></div>
