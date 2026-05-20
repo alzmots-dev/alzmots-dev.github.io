@@ -53,7 +53,6 @@ const DATA = {
         num: 1,
         title: 'Vidéo 1 — Ne parvient pas à ressortir un prénom ou un nom d\'objet qu\'il connait',
         sub: 'Stratégies pratiques au quotidien',
-        src: 'video1.MP4'
       },
       strategies: [
         'Laisser du temps',
@@ -91,7 +90,8 @@ const DATA = {
       video: {
         num: 3,
         title: 'Vidéo 3 — La communication par le silence',
-        sub: 'Présence et non-verbal'
+        sub: 'Présence et non-verbal',
+        src: 'https://youtu.be/qwAJAPgzRsk' 
       },
       strategies: [
         'Poser des questions fermées',
@@ -218,18 +218,33 @@ const DATA = {
       desc.className = 'result-desc';
       desc.textContent = node.desc;
   
-      const vb = document.createElement('div');
-      vb.className = 'video-block';
-      vb.innerHTML = node.video.src
-     ?   `<video controls style="width:250px; border-radius:9px; display:block; margin:0 auto;" playsinline> 
-           <source src="${node.video.src}" type="video/mp4">
-         </video>`
-      : `<div class="video-thumb"><div class="play-icon"></div></div>
-         <div class="video-info">
-           <div class="video-title">${node.video.title}</div>
-           ${node.video.sub ? `<div class="video-sub">${node.video.sub}</div>` : ''}
-         </div>`;
-  
+     //  COLLE ÇA À LA PLACE :
+    const vb = document.createElement('div');
+    vb.className = 'video-block';
+    
+    if (node.video && node.video.src) {
+      vb.innerHTML = `
+        <iframe
+          width="100%"
+          height="315"
+          src="${node.video.src}"
+          frameborder="0"
+          allowfullscreen
+          style="border-radius:9px; display:block; margin:15px auto; max-width:560px;">
+        </iframe>
+        <div class="video-info" style="text-align: center; margin-top: 10px;">
+          <div class="video-title" style="font-weight: bold;">${node.video.title}</div>
+          ${node.video.sub ? `<div class="video-sub" style="font-size: 0.9em; color: #666;">${node.video.sub}</div>` : ''}
+        </div>`;
+    } else {
+      vb.innerHTML = `
+        <div class="video-thumb"><div class="play-icon"></div></div>
+        <div class="video-info">
+          <div class="video-title">${node.video.title}</div>
+          ${node.video.sub ? `<div class="video-sub">${node.video.sub}</div>` : ''}
+        </div>`;
+    }
+
       const slbl = document.createElement('div');
       slbl.className = 'strategies-label';
       slbl.textContent = 'Stratégies suggérées';
