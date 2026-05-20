@@ -224,18 +224,25 @@ const DATA = {
     
     if (node.video && node.video.src) {
       vb.innerHTML = `
-        <iframe
-          width="100%"
-          height="315"
-          src="${node.video.src}"
-          frameborder="0"
-          allowfullscreen
-          style="border-radius:9px; display:block; margin:15px auto; max-width:560px;">
-        </iframe>
-        <div class="video-info" style="text-align: center; margin-top: 10px;">
-          <div class="video-title" style="font-weight: bold;">${node.video.title}</div>
-          ${node.video.sub ? `<div class="video-sub" style="font-size: 0.9em; color: #666;">${node.video.sub}</div>` : ''}
-        </div>`;
+          <div style="display: flex; flex-direction: column; width: 100%; gap: 12px; align-items: center; margin: 15px 0;">
+              <div style="text-align: center; width: 100%;">
+                  <div style="font-weight: bold; font-size: 1.1em; color: #333; margin-bottom: 4px;">
+                      ${node.video.title}
+                  </div>
+                  ${node.video.sub ? `<div style="font-size: 0.9em; color: #666; font-style: italic;">${node.video.sub}</div>` : ''}
+              </div>
+              
+              <iframe 
+                  width="100%" 
+                  height="315" 
+                  src="${node.video.src}" 
+                  frameborder="0" 
+                  allowfullscreen
+                  style="border-radius: 9px; display: block; max-width: 560px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+              </iframe>
+          </div>
+      `;
+  
     } else {
       vb.innerHTML = `
         <div class="video-thumb"><div class="play-icon"></div></div>
