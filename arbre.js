@@ -53,7 +53,7 @@ const DATA = {
         num: 1,
         title: 'Vidéo 1 — Ne parvient pas à ressortir un prénom ou un nom d\'objet qu\'il connait',
         sub: 'Stratégies pratiques au quotidien',
-        src: 'video 1.MP4'
+        src: 'video1.MP4'
       },
       strategies: [
         'Laisser du temps',
