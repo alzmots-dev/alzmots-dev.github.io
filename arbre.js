@@ -91,7 +91,7 @@ const DATA = {
         num: 3,
         title: 'Vidéo 3 — La communication par le silence',
         sub: 'Présence et non-verbal',
-        src: 'https://youtu.be/qwAJAPgzRsk' 
+        src: 'https://www.youtube.com/embed/qwAJAPgzRsk'
       },
       strategies: [
         'Poser des questions fermées',
